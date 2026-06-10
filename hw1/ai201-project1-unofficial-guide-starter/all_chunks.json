@@ -1,0 +1,218 @@
+[
+  {
+    "chunk_id": "54f857647bd57ea5",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p3",
+    "chunk_index": 0,
+    "chunk_method": "recursive",
+    "text": "CAP6412\nAdvanced Computer Vision\nSpring 2026\nYogesh S Rawat\nyogesh@ucf.edu\nUCF Global 223\n1/27/2026 CAP6412 - Lecture 2 Transformer 1\n\nTransformer\nLecture 2\n1/27/2026 CAP6412 - Lecture 2 Transformer 2\n\nContent\n- Basics\n- What is Transformer?\n- Self-Attention\n- Query, Key, Value\n- Position encoding\n- Encoder-Decoder\n- BERT\n- Vision Transformers\n- VIT\n- SWIN\n1/27/2026 CAP6412 - Lecture 2 Transformer 3",
+    "token_estimate": 83
+  },
+  {
+    "chunk_id": "8fda89b14bb535aa",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 1,
+    "chunk_method": "semantic",
+    "text": "1/27/2026 CAP6412 - Lecture 2 Transformer 3 Transformer - Used for modeling long dependencies between input sequence elements - Supports parallel processing of sequence - As compared to RNN (e.g. - Allows processing multiple modalities - (e.g., images, videos, text and speech) using similar processing blocks - Typically, pre-trained using pretext tasks on largescale (unlabeled) datasets - Demonstrates excellent scalability to very large networks and huge datasets.",
+    "token_estimate": 87
+  },
+  {
+    "chunk_id": "46411971758a8f74",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1",
+    "chunk_index": 2,
+    "chunk_method": "semantic",
+    "text": "lability to very large networks and huge datasets. - GPT-4 (Generative Pretrained Transformer)",
+    "token_estimate": 16
+  },
+  {
+    "chunk_id": "697f56b46640ecc8",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 3,
+    "chunk_method": "recursive",
+    "text": "asets.\n- GPT-4 (Generative Pretrained Transformer) 1/27/2026 CAP6412 - Lecture 2 Transformer 4 Natural Language Processing\n- BERT (Bidirectional Encoder Representations from Transformers),\n- GPT (Generative Pre-trained Transformer) v1-4,\n- RoBERTa (Robustly Optimized BERT Pre-training)\n- T5 (Text-to-Text Transfer Transformer)\n- Gemini\n- LLaMA\n- Most recent LLMs and VLMs\n1/27/2026 CAP6412 - Lecture 2 Transformer 5",
+    "token_estimate": 74
+  },
+  {
+    "chunk_id": "aa35225d07fc1aa7",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 4,
+    "chunk_method": "semantic",
+    "text": "1/27/2026 CAP6412 - Lecture 2 Transformer 5 Vision Applications - Recognition tasks - e.g., image classification, object detection, and segmentation - Generative modeling, multi-modal tasks - e.g., visual-question answering, visual reasoning, and visual grounding - Video processing - e.g., activity recognition, frame prediction - Low-level vision - e.g., image super-resolution, image enhancement, and colorization) - 3D analysis - e.g., point cloud classification and segmentation)",
+    "token_estimate": 83
+  },
+  {
+    "chunk_id": "8885ce3b0f30002b",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1",
+    "chunk_index": 5,
+    "chunk_method": "semantic",
+    "text": "e.g., point cloud classification and segmentation) 1/27/2026 CAP6412 - Lecture 2 Transformer 6",
+    "token_estimate": 16
+  },
+  {
+    "chunk_id": "fa592e6c462b7409",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 6,
+    "chunk_method": "recursive",
+    "text": "ation)\n1/27/2026 CAP6412 - Lecture 2 Transformer 6 Transformer Basics\n- It consists of Encoder and Decoder Blocks\n- Main components of each block:\n- Self-Attention\n- Layer Normalization\n- Feed Forward Network\n1/27/2026 CAP6412 - Lecture 2 Transformer 7\n\nTransformer\nENCODER\nDECODER\n1/27/2026 CAP6412 - Lecture 2 Transformer 8\n\nSelf-attention\nhttps://raviteja-ganta.github.io/attention-is-all-you-need-transformers\n1/27/2026 CAP6412 - Lecture 2 Transformer 9\n\nOperation in self-attention\n1/27/2026 CAP6412 - Lecture 2 Transformer 10",
+    "token_estimate": 89
+  },
+  {
+    "chunk_id": "0f4cb4b155639af9",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 7,
+    "chunk_method": "recursive",
+    "text": "ntion\n1/27/2026 CAP6412 - Lecture 2 Transformer 10 Recap\nCAP5415\nRemember matrix multiplication?\n1/27/2026 CAP6412 - Lecture 2 Transformer 11\n\nMatrix operation\n- Matrix Multiplication – another interpretation (my favorite)\n- Let denote the i-th column of the matrix , and\n \n- denote the j-th column of the matrix B.\n \n = ⋯ , and = ⋯ \n1 2 1 2 \n- The first column of AB\n- Linear combination of all the columns in A\n + + … + \n 11 12 1 \n1/27/2026 CAP5415 - Lecture 2 12",
+    "token_estimate": 114
+  },
+  {
+    "chunk_id": "1ef0d1d374a462bb",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 8,
+    "chunk_method": "recursive",
+    "text": "+ … + \n 11 12 1 \n1/27/2026 CAP5415 - Lecture 2 12 Matrix operation\n + + … + \n 11 21 1\n- Similarly, we can get other columns…\n1/27/2026 CAP5415 - Lecture 2 13\n\nMatrix operation\n- How about linear combination of all rows of B?\n- Each row of C = AB is a linear combination of rows of B\n + + … + \n 11 12 1 \n1/27/2026 CAP5415 - Lecture 2 14\n\nSelf-Attention (Matrix Explanation)\n1/27/2026 CAP6412 - Lecture 2 Transformer 15\n\nSoftmax\n- Done along rows\n- Why?\n1/27/2026 CAP6412 - Lecture 2 Transformer 16",
+    "token_estimate": 127
+  },
+  {
+    "chunk_id": "3b042bdbe3bbf76d",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 9,
+    "chunk_method": "recursive",
+    "text": "Why?\n1/27/2026 CAP6412 - Lecture 2 Transformer 16 Multiple heads\n- You break each token (K,V,Q) into multiple tokens\n- Along the feature dimension\n- For example, 12 in GPT-2\n- Each head processes a segment of the embeddings independently\n- Capturing different syntactic and semantic relationships.\n- This design facilitates parallel learning of diverse linguistic features\n- Enhancing the model's representational power.\nhttps://poloclub.github.io/transformer-explainer/\n1/27/2026 CAP6412 - Lecture 2 Transformer 17",
+    "token_estimate": 92
+  },
+  {
+    "chunk_id": "b42f19eda60d8667",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 10,
+    "chunk_method": "recursive",
+    "text": "iner/\n1/27/2026 CAP6412 - Lecture 2 Transformer 17 Layer normalization\n- Layer normalization normalizes the inputs across\nthe features\n- Why not BatchNorm?\n1/27/2026 CAP6412 - Lecture 2 Transformer 18\n\nWhere is learning?\n1/27/2026 CAP6412 - Lecture 2 Transformer 19\n\nQuestions?\n1/27/2026 CAP6412 - Lecture 2 Transformer 20\n\nContent\n- Basics\n- What is Transformer?\n- Self-Attention\n- Query, Key, Value\n- Position encoding\n- Encoder-Decoder\n- BERT\n- Vision Transformers\n- VIT\n- SWIN\n1/27/2026 CAP6412 - Lecture 2 Transformer 21",
+    "token_estimate": 106
+  },
+  {
+    "chunk_id": "aa36edf91f8d53e1",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p3",
+    "chunk_index": 11,
+    "chunk_method": "recursive",
+    "text": "SWIN\n1/27/2026 CAP6412 - Lecture 2 Transformer 21 Positional encodings\n- Transformer is permutation\ninvariant\n- Transformer process tokens in\nparallel\n- Attention mechanism does not\ntake into account\n- The position of a word in the\nsequence\nhttps://raviteja-ganta.github.io/attention-is-all-you-need-transformers\n1/27/2026 CAP6412 - Lecture 2 Transformer 22",
+    "token_estimate": 59
+  },
+  {
+    "chunk_id": "39584a1c17606c8b",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p3",
+    "chunk_index": 12,
+    "chunk_method": "recursive",
+    "text": "rmers\n1/27/2026 CAP6412 - Lecture 2 Transformer 22 Why positional encodings\n- “The teacher said the student is smart.”\n- “The student said the teacher is smart.”\n- “Only she said he was wrong.”\n- “She said only he was wrong.”\n1/27/2026 CAP6412 - Lecture 2 Transformer 23",
+    "token_estimate": 62
+  },
+  {
+    "chunk_id": "3d3f146f2acc128f",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 13,
+    "chunk_method": "recursive",
+    "text": "ong.”\n1/27/2026 CAP6412 - Lecture 2 Transformer 23 Positional encodings\n- The transformer adds a vector to each input embedding.\n- These vectors follow a specific pattern that the model\nlearns\n- Learned pattern helps model\n- to determine the position of each word, or\n- the distance between different words.\n1/27/2026 CAP6412 - Lecture 2 Transformer 24\n\nPosition Encoding\n1/27/2026 CAP6412 - Lecture 2 Transformer 25\n\nPosition Encoding\n1/27/2026 CAP6412 - Lecture 2 Transformer 26\n\nPosition Encoding\n1/27/2026 CAP6412 - Lecture 2 Transformer 27",
+    "token_estimate": 110
+  },
+  {
+    "chunk_id": "3cbeb8ac8b94ba49",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 14,
+    "chunk_method": "recursive",
+    "text": "oding\n1/27/2026 CAP6412 - Lecture 2 Transformer 27 Position Encoding\n- Can also be learned\n- Learn like other parameters\n- CoPE (Complex Positional Encoding)\n- A lightweight method designed to be more flexible\n- Enabling positional encoding based on token context\n- Rather than just absolute distance.\n- RoPE (Rotary Position Embedding)\n- To better handle long-context sequences\n- By multiplying the attention matrix with a rotation matrix\n1/27/2026 CAP6412 - Lecture 2 Transformer 28",
+    "token_estimate": 98
+  },
+  {
+    "chunk_id": "4525d193660dac47",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p3",
+    "chunk_index": 15,
+    "chunk_method": "recursive",
+    "text": "atrix\n1/27/2026 CAP6412 - Lecture 2 Transformer 28 Content\n- Basics\n- What is Transformer?\n- Self-Attention\n- Query, Key, Value\n- Position encoding\n- Encoder-Decoder\n- BERT\n- Vision Transformers\n- VIT\n- SWIN\n1/27/2026 CAP6412 - Lecture 2 Transformer 29\n\nEncoder-decoder\n- Output of encoder is used in attention\n- The same output is used in all decoder\nblocks\n1/27/2026 CAP6412 - Lecture 2 Transformer 30",
+    "token_estimate": 88
+  },
+  {
+    "chunk_id": "81d017f4f3e5d4cd",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 16,
+    "chunk_method": "recursive",
+    "text": "locks\n1/27/2026 CAP6412 - Lecture 2 Transformer 30 Encoder-decoder\n- Cross-attention\nhttps://www.geeksforgeeks.org/nlp/cross-attention-mechanism-in-transformers/\n1/27/2026 CAP6412 - Lecture 2 Transformer 31\n\nAttention masking\n- Decoder is autoregressive\n- Avoid seeing the future\n1/27/2026 CAP6412 - Lecture 2 Transformer 32\n\nAttention masking\nhttps://poloclub.github.io/transformer-explainer/\n1/27/2026 CAP6412 - Lecture 2 Transformer 33\n\nQuestions?\n1/27/2026 CAP6412 - Lecture 2 Transformer 34",
+    "token_estimate": 71
+  },
+  {
+    "chunk_id": "e1a4ae2e29053205",
+    "source_file": "Lecture-2_Transformer_-_advanced_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 17,
+    "chunk_method": "recursive",
+    "text": "ions?\n1/27/2026 CAP6412 - Lecture 2 Transformer 34 Content\n- Basics\n- What is Transformer?\n- Self-Attention\n- Query, Key, Value\n- Position encoding\n- Encoder-Decoder\n- BERT\n- Vision Transformers\n- VIT\n- SWIN\n1/27/2026 CAP6412 - Lecture 2 Transformer 35\n\nDemo\n- https://poloclub.github.io/transformer-explainer/\n1/27/2026 CAP6412 - Lecture 2 Transformer 36\n\nQuestions?\n1/27/2026 CAP6412 - Lecture 2 Transformer 37\n\nThank you!\nSlides credit: Mubarak Shah\n1/27/2026 CAP6412 - Lecture 2 Transformer 38",
+    "token_estimate": 94
+  },
+  {
+    "chunk_id": "44fb80e5f17b2b50",
+    "source_file": "Lecture_10_-_Autoencoder_-_intro_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 0,
+    "chunk_method": "recursive",
+    "text": "CAP5415\nComputer Vision\nYogesh S Rawat\nyogesh@ucf.edu\nHEC-241\n10/3/2024 CAP5415 - Lecture 10 1\n\nAutoencoder\nLecture 10\n10/3/2024 CAP5415 - Lecture 10 2\n\nAutoencoder\n- Reproduce the input\n- Via learning features\n- Unsupervised learning\n- Efficient way to learn features\n- Still need a loss function – implicit supervision\n- Supervised learning\n- Need labels/annotations\n10/3/2024 CAP5415 - Lecture 10 3\n\nAutoencoder\n- Encoder – decoder\n- Encoding\n- Key idea\n10/3/2024 CAP5415 - Lecture 10 4",
+    "token_estimate": 101
+  },
+  {
+    "chunk_id": "a7f6c5623c6e8f99",
+    "source_file": "Lecture_10_-_Autoencoder_-_intro_cv.pdf",
+    "page_range": "p1-p3",
+    "chunk_index": 1,
+    "chunk_method": "recursive",
+    "text": "coding\n- Key idea\n10/3/2024 CAP5415 - Lecture 10 4 Autoencoder\n- Compare PCA/SVD\n- PCA produce smaller set of vectors\n- Approximate the input vectors via linear combination.\n- Very efficient for certain applications.\n- Autoencoder\n- Can learn nonlinear dependencies\n- Can use convolutional layers\n- Can use transfer learning\n10/3/2024 CAP5415 - Lecture 10 5",
+    "token_estimate": 75
+  },
+  {
+    "chunk_id": "c28178cd1187aeac",
+    "source_file": "Lecture_10_-_Autoencoder_-_intro_cv.pdf",
+    "page_range": "p1-p5",
+    "chunk_index": 2,
+    "chunk_method": "recursive",
+    "text": "transfer learning\n10/3/2024 CAP5415 - Lecture 10 5 Autoencoder\n- Encoder: h = f(x)\n- Compress input into a latent-space\n- Usually smaller dimension\n- Decoder: r = g(f(x))\n- Reconstruct input from the latent space\n10/3/2024 CAP5415 - Lecture 10 6\n\nAutoencoder\n- Encoder: h = f(x)\n- Compress input into a latent-space\n- Usually smaller dimension\n- Decoder: r = g(f(x))\n- Reconstruct input from the latent space\n10/3/2024 CAP5415 - Lecture 10 7\n\nAutoencoder\n- Shallow\n10/3/2024 CAP5415 - Lecture 10 8",
+    "token_estimate": 110
+  },
+  {
+    "chunk_id": "0a3900464700048a",
+    "source_file": "Lecture_10_-_Autoencoder_-_intro_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 3,
+    "chunk_method": "recursive",
+    "text": "encoder\n- Shallow\n10/3/2024 CAP5415 - Lecture 10 8 Autoencoder\n- Deep\n10/3/2024 CAP5415 - Lecture 10 9\n\nAutoencoder\n- CNN\n10/3/2024 CAP5415 - Lecture 10 10\n\nAutoencoder\n- Reconstruction\n- Latent vector of size 2\n- Compression from 28x28\n10/3/2024 CAP5415 - Lecture 10 11\n\nFeature learning\n- Define a loss function\n- MSE, CE, etc.\n- Optimize\n10/3/2024 CAP5415 - Lecture 10 12\n\nFeature learning\n- Image retrieval\n- Dimensionality reduction helps\n10/3/2024 CAP5415 - Lecture 10 13",
+    "token_estimate": 104
+  },
+  {
+    "chunk_id": "bae5d4e2a84068e8",
+    "source_file": "Lecture_10_-_Autoencoder_-_intro_cv.pdf",
+    "page_range": "p1-p3",
+    "chunk_index": 4,
+    "chunk_method": "recursive",
+    "text": "reduction helps\n10/3/2024 CAP5415 - Lecture 10 13 Autoencoder – application\n- Denoising\n10/3/2024 CAP5415 - Lecture 10 14\n\nAutoencoder – application\n- Image colorization\n10/3/2024 CAP5415 - Lecture 10 15\n\nAutoencoder – application\n- Anomaly detection\n10/3/2024 CAP5415 - Lecture 10 16",
+    "token_estimate": 55
+  },
+  {
+    "chunk_id": "5914f8cfb34f3848",
+    "source_file": "Lecture_10_-_Autoencoder_-_intro_cv.pdf",
+    "page_range": "p1-p4",
+    "chunk_index": 5,
+    "chunk_method": "recursive",
+    "text": "nomaly detection\n10/3/2024 CAP5415 - Lecture 10 16 Properties\n- Data-specific\n- Compress data similar to what they have been trained on\n- Lossy\n- Outputs will be degraded compared to the original inputs\n- Learned automatically from examples\n- It is easy to train\n- It will perform well on data similar to training samples\n- Compare with hand-crafted features\n10/3/2024 CAP5415 - Lecture 10 17\n\nQuestions?\n10/3/2024 CAP5415 - Lecture 10 18",
+    "token_estimate": 96
+  }
+]

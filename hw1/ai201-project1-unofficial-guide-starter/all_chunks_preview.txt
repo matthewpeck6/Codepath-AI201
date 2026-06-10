@@ -1,0 +1,24 @@
+[54f85764] [recursive] CAP6412 Advanced Computer Vision Spring 2026 Yogesh S Rawat yogesh@ucf.edu UCF Global 223 1/27/2026 CAP6412 - Lecture 2 
+[8fda89b1] [semantic] 1/27/2026 CAP6412 - Lecture 2 Transformer 3 Transformer - Used for modeling long dependencies between input sequence ele
+[46411971] [semantic] lability to very large networks and huge datasets. - GPT-4 (Generative Pretrained Transformer)
+[697f56b4] [recursive] asets. - GPT-4 (Generative Pretrained Transformer) 1/27/2026 CAP6412 - Lecture 2 Transformer 4 Natural Language Processi
+[aa35225d] [semantic] 1/27/2026 CAP6412 - Lecture 2 Transformer 5 Vision Applications - Recognition tasks - e.g., image classification, object
+[8885ce3b] [semantic] e.g., point cloud classification and segmentation) 1/27/2026 CAP6412 - Lecture 2 Transformer 6
+[fa592e6c] [recursive] ation) 1/27/2026 CAP6412 - Lecture 2 Transformer 6 Transformer Basics - It consists of Encoder and Decoder Blocks - Main
+[0f4cb4b1] [recursive] ntion 1/27/2026 CAP6412 - Lecture 2 Transformer 10 Recap CAP5415 Remember matrix multiplication? 1/27/2026 CAP6412 - Lec
+[1ef0d1d3] [recursive] + … +   11 12 1  1/27/2026 CAP5415 - Lecture 2 12 Matrix operation  + + … +   11 21 1 - Similarly, we can get other colu
+[3b042bdb] [recursive] Why? 1/27/2026 CAP6412 - Lecture 2 Transformer 16 Multiple heads - You break each token (K,V,Q) into multiple tokens - A
+[b42f19ed] [recursive] iner/ 1/27/2026 CAP6412 - Lecture 2 Transformer 17 Layer normalization - Layer normalization normalizes the inputs acros
+[aa36edf9] [recursive] SWIN 1/27/2026 CAP6412 - Lecture 2 Transformer 21 Positional encodings - Transformer is permutation invariant - Transfor
+[39584a1c] [recursive] rmers 1/27/2026 CAP6412 - Lecture 2 Transformer 22 Why positional encodings - “The teacher said the student is smart.” -
+[3d3f146f] [recursive] ong.” 1/27/2026 CAP6412 - Lecture 2 Transformer 23 Positional encodings - The transformer adds a vector to each input em
+[3cbeb8ac] [recursive] oding 1/27/2026 CAP6412 - Lecture 2 Transformer 27 Position Encoding - Can also be learned - Learn like other parameters
+[4525d193] [recursive] atrix 1/27/2026 CAP6412 - Lecture 2 Transformer 28 Content - Basics - What is Transformer? - Self-Attention - Query, Key
+[81d017f4] [recursive] locks 1/27/2026 CAP6412 - Lecture 2 Transformer 30 Encoder-decoder - Cross-attention https://www.geeksforgeeks.org/nlp/c
+[e1a4ae2e] [recursive] ions? 1/27/2026 CAP6412 - Lecture 2 Transformer 34 Content - Basics - What is Transformer? - Self-Attention - Query, Key
+[44fb80e5] [recursive] CAP5415 Computer Vision Yogesh S Rawat yogesh@ucf.edu HEC-241 10/3/2024 CAP5415 - Lecture 10 1  Autoencoder Lecture 10 1
+[a7f6c562] [recursive] coding - Key idea 10/3/2024 CAP5415 - Lecture 10 4 Autoencoder - Compare PCA/SVD - PCA produce smaller set of vectors - 
+[c28178cd] [recursive] transfer learning 10/3/2024 CAP5415 - Lecture 10 5 Autoencoder - Encoder: h = f(x) - Compress input into a latent-space 
+[0a390046] [recursive] encoder - Shallow 10/3/2024 CAP5415 - Lecture 10 8 Autoencoder - Deep 10/3/2024 CAP5415 - Lecture 10 9  Autoencoder - CN
+[bae5d4e2] [recursive] reduction helps 10/3/2024 CAP5415 - Lecture 10 13 Autoencoder – application - Denoising 10/3/2024 CAP5415 - Lecture 10 1
+[5914f8cf] [recursive] nomaly detection 10/3/2024 CAP5415 - Lecture 10 16 Properties - Data-specific - Compress data similar to what they have 
