@@ -14,8 +14,14 @@ import os
 import re
 import json
 import urllib.request
-
 from utils.data_loader import load_listings
+from dotenv import load_dotenv
+from groq import Groq
+
+# Load the .env file and Get the API key
+load_dotenv()
+api_key = os.getenv("GROQ_API_KEY")
+print(api_key)
 
 # ── LLM client ────────────────────────────────────────────────────────────────
 
@@ -28,7 +34,8 @@ def _call_llm(prompt: str, temperature: float = 0.7, max_tokens: int = 500) -> s
     For Groq users: swap the URL, headers, and payload shape for Groq's
     /openai/v1/chat/completions endpoint and set GROQ_API_KEY instead.
     """
-    api_key = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("GROQ_API_KEY")
+    load_dotenv()
+    api_key = os.getenv("GROQ_API_KEY")
 
     if not api_key:
         # No key available — return a clearly-labelled mock so LLM tools still
@@ -41,55 +48,17 @@ def _call_llm(prompt: str, temperature: float = 0.7, max_tokens: int = 500) -> s
     # Detect which key we have and route accordingly
     if os.environ.get("GROQ_API_KEY"):
         return _call_groq(prompt, temperature, max_tokens)
-    else:
-        return _call_anthropic(prompt, temperature, max_tokens)
-
-
-def _call_anthropic(prompt: str, temperature: float, max_tokens: int) -> str:
-    api_key = os.environ["ANTHROPIC_API_KEY"]
-    payload = json.dumps({
-        "model": "claude-sonnet-4-6",
-        "max_tokens": max_tokens,
-        "temperature": temperature,
-        "messages": [{"role": "user", "content": prompt}],
-    }).encode("utf-8")
-
-    req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
-        },
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read())
-    return data["content"][0]["text"].strip()
 
 
 def _call_groq(prompt: str, temperature: float, max_tokens: int) -> str:
-    api_key = os.environ["GROQ_API_KEY"]
-    payload = json.dumps({
-        "model": "llama-3.3-70b-versatile",
-        "max_tokens": max_tokens,
-        "temperature": temperature,
-        "messages": [{"role": "user", "content": prompt}],
-    }).encode("utf-8")
-
-    req = urllib.request.Request(
-        "https://api.groq.com/openai/v1/chat/completions",
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
-        method="POST",
+    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=temperature,
+        max_tokens=max_tokens,
     )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read())
-    return data["choices"][0]["message"]["content"].strip()
+    return response.choices[0].message.content.strip()
 
 
 # ── Tool 1: search_listings ───────────────────────────────────────────────────
@@ -316,8 +285,8 @@ if __name__ == "__main__":
     caption2 = create_fit_card(suggestion, item)
     print(f"  Run 2: {caption2[:100]}...")
     if caption == caption2:
-        print("  ⚠️  Outputs identical — consider increasing temperature")
+        print("Outputs identical — consider increasing temperature")
     else:
         print("  ✓ Outputs differ (temperature working)")
 
-    print("\n✅ All smoke tests passed.")
+    print("\n All smoke tests passed.")
