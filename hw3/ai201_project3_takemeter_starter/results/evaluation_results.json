@@ -1,0 +1,106 @@
+{
+  "model_finetuned": "distilbert-base-uncased",
+  "model_baseline": "llama-3.3-70b-versatile (zero-shot)",
+  "test_set_size": 119,
+  "label_map": {
+    "vent": 0,
+    "advice": 1,
+    "discussion": 2
+  },
+  "baseline": {
+    "accuracy": 0.7059,
+    "macro_f1": 0.7097,
+    "evaluated_on": 119,
+    "unparseable": 0,
+    "per_label": {
+      "vent": {
+        "precision": 0.718,
+        "recall": 0.7,
+        "f1": 0.709
+      },
+      "advice": {
+        "precision": 0.806,
+        "recall": 0.694,
+        "f1": 0.746
+      },
+      "discussion": {
+        "precision": 0.633,
+        "recall": 0.721,
+        "f1": 0.674
+      }
+    },
+    "confusion_matrix": [
+      [
+        28,
+        1,
+        11
+      ],
+      [
+        4,
+        25,
+        7
+      ],
+      [
+        7,
+        5,
+        31
+      ]
+    ]
+  },
+  "finetuned": {
+    "accuracy": 0.4034,
+    "macro_f1": 0.3249,
+    "epochs": 3,
+    "learning_rate": 2e-05,
+    "batch_size": 16,
+    "warmup_steps": 30,
+    "weight_decay": 0.01,
+    "max_seq_length": 256,
+    "per_label": {
+      "vent": {
+        "precision": 0.75,
+        "recall": 0.075,
+        "f1": 0.136
+      },
+      "advice": {
+        "precision": 0.391,
+        "recall": 0.25,
+        "f1": 0.305
+      },
+      "discussion": {
+        "precision": 0.391,
+        "recall": 0.837,
+        "f1": 0.533
+      }
+    },
+    "confusion_matrix": [
+      [
+        3,
+        7,
+        30
+      ],
+      [
+        1,
+        9,
+        26
+      ],
+      [
+        0,
+        7,
+        36
+      ]
+    ]
+  },
+  "delta": {
+    "accuracy": -0.3025,
+    "macro_f1": -0.3848
+  },
+  "planning_md_thresholds": {
+    "macro_f1_minimum": 0.72,
+    "macro_f1_target": 0.78,
+    "min_improvement_over_baseline": 0.05,
+    "minimum_met": false,
+    "target_met": false,
+    "improvement_criterion_met": false
+  }
+}
